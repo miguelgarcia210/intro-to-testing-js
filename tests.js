@@ -115,3 +115,108 @@ describe('isFive', function() {
         expect(isFive("500")).toBe(false);
     });
 });
+
+describe('isEven', function() {
+    it('should return a defined function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+//    Should return a boolean value always
+    it('should return a boolean value', function () {
+        expect(typeof isEven()).toBe("boolean");
+    });
+//    Should return true when passed an even number
+    it('should return true when passed an even number', function () {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true when passed an even number', function () {
+        expect(isEven(40)).toBe(true);
+    });
+    it('should return true when passed an even number', function () {
+        expect(isEven(1000)).toBe(true);
+    });
+//    Should return true when passed an even negative number
+    it('should return true when passed an even negative number', function () {
+        expect(isEven(-2)).toBe(true);
+    });
+    it('should return true when passed an even negative number', function () {
+        expect(isEven(-40)).toBe(true);
+    });
+    it('should return true when passed an even negative number', function () {
+        expect(isEven(-1000)).toBe(true);
+    });
+//    Should return false when passed an odd number
+    it('should return false when passed an odd number', function () {
+        expect(isEven(5)).toBe(false);
+    });
+    it('should return false when passed an odd number', function () {
+        expect(isEven(55)).toBe(false);
+    });
+    it('should return false when passed an odd number', function () {
+        expect(isEven(5005)).toBe(false);
+    });
+//    Should return false when passed a string
+    it('should return false when passed a string', function () {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return false when passed a string', function () {
+        expect(isEven("codeup")).toBe(false);
+    });
+    it('should return false when passed a string', function () {
+        expect(isEven("duck")).toBe(false);
+    });
+//    Should return true when passed an even number as a string
+    it('should return true when passed an even number as a string', function () {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return true when passed an even number as a string', function () {
+        expect(isEven("16")).toBe(true);
+    });
+    it('should return true when passed an even number as a string', function () {
+        expect(isEven("80")).toBe(true);
+    });
+//    Should return false when passed an odd number as a string
+    it('should return false when passed an odd number as a string', function () {
+        expect(isEven("25")).toBe(false);
+    });
+    it('should return false when passed an odd number as a string', function () {
+        expect(isEven("55")).toBe(false);
+    });
+    it('should return false when passed an odd number as a string', function () {
+        expect(isEven("69")).toBe(false);
+    });
+//    Should return true when passed an even negative number as a string
+    it('should return true when passed an even negative number as a string', function () {
+        expect(isEven("-10")).toBe(true);
+    });
+    it('should return true when passed an even negative number as a string', function () {
+        expect(isEven("-100")).toBe(true);
+    });
+    it('should return true when passed an even negative number as a string', function () {
+        expect(isEven("-2684")).toBe(true);
+    });
+//    Should return false when passed an odd negative number as a string
+    it('should return false when passed an odd negative number as a string', function () {
+        expect(isEven("-55")).toBe(false);
+    });
+    it('should return false when passed an odd negative number as a string', function () {
+        expect(isEven("-890549")).toBe(false);
+    });
+    it('should return false when passed an odd negative number as a string', function () {
+        expect(isEven("-789")).toBe(false);
+    });
+//    Should return false when passed Infinity
+    it('should return false when passed Infinity', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+//    Should return false when passed a boolean value
+    it('should return false when passed a boolean value', function () {
+        expect(isEven(false)).toBe(false);
+    });
+    it('should return false when passed a boolean value', function () {
+        expect(isEven(true)).toBe(false);
+    });
+//    Should return false when called without an argument
+    it('should return false when called without an argument', function () {
+        expect(isEven()).toBe(false);
+    });
+});

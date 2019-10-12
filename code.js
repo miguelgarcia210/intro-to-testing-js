@@ -53,5 +53,11 @@ function sayHello(x) {
 
 function isFive(x) {
     return parseFloat(x) === 5;
+}
 
+function isEven(x) {
+    if (typeof x === "boolean") {
+        return false;
+    }
+    return x % 2 === 0;
 }
