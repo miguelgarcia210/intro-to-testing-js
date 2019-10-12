@@ -21,6 +21,8 @@ describe('sayHello', function() {
     it('should return a string when called.', function () {
         expect(typeof sayHello()).toBe("string");
     });
+
+    // TEST IF INPUT RETURNS GREETING WITH STRING INPUT
     it('should return "Hello, Jane!"', function () {
         expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
@@ -29,5 +31,57 @@ describe('sayHello', function() {
     });
     it('should return "Hello, Pat!"', function () {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+
+    // TEST RETURN WHEN FUNCTION IS CALLED
+    it('should return "Hello, World!" when "undefined"', function () {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+
+    // TEST IF INPUT IS A BOOLEAN VALUE
+    it('should return "Hello, World!" when passed boolean true', function () {
+        expect(sayHello(true)).toBe("Hello, World!")
+    });
+    it('should return "Hello, World!" when passed boolean false', function () {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+
+    // TEST IF INPUT IS 'NULL'
+    it('should return "not a string" when null', function () {
+        expect(sayHello(null)).toBe("not a string");
+    });
+
+    // TEST IF INPUT IS AN EMPTY STRING
+    it('should return "Hello, World!" when passed an empty string', function () {
+        expect(sayHello("")).toBe("Hello, World!");
+    });
+
+    // TEST IF INPUT IS A NUMBER
+    it('should return "input cannot be or start with a number" when passed a number', function () {
+        expect(sayHello(5)).toBe("input cannot be or start with a number");
+    });
+    it('should return "input cannot be or start with a number" when passed a number', function () {
+        expect(sayHello(100)).toBe("input cannot be or start with a number");
+    });
+    it('should return "input cannot be or start with a number" when passed a number', function () {
+        expect(sayHello(55)).toBe("input cannot be or start with a number");
+    });
+
+    // TEST IF INPUT BEGINS WITH A NUMBER IN A STRING
+    it('should return "input cannot be or start with a number" when passed a number as a string', function () {
+        expect(sayHello("5")).toBe("input cannot be or start with a number");
+    });
+    it('should return "input cannot be or start with a number" when passed a number as a string', function () {
+        expect(sayHello("10Jane0")).toBe("input cannot be or start with a number");
+    });
+    it('should return "input cannot be or start with a number" when passed a number as a string', function () {
+        expect(sayHello("45Jane")).toBe("input cannot be or start with a number");
+    }); it('should return "input cannot be or start with a number" when passed a number as a string', function () {
+        expect(sayHello("45Jane")).toBe("input cannot be or start with a number");
+    });
+
+    // TEST IF INPUT IS ANOTHER DATA TYPE
+    it('should return "not a string" when passed another data type', function () {
+        expect(sayHello(["a","b"])).toBe("not a string");
     });
 });

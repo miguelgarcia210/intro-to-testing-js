@@ -11,5 +11,42 @@ function sayHello(x) {
     // } else {
     //     return "Hello, Jane!";
     // }
+    if (x === undefined) {
+        return "Hello, World!";
+    }
+
+    //TODO: if input is a boolean
+
+    // if (x === true) {
+    //     return "Hello, World!";
+    // }
+    //
+    // if (x === false) {
+    //     return "Hello, World!";
+    // }
+
+    // REFACTORED
+    if (typeof x === "boolean") {
+        return "Hello, World!";
+    }
+
+    //TODO: if passed an empty string
+
+    if (x === "") {
+        return "Hello, World!";
+    }
+
+    //TODO: if input is a number OR begins with a string number
+
+    if (!isNaN(parseFloat(x))) {
+        return "input cannot be or start with a number"
+    }
+
+    //TODO: if passed another data type
+
+    if (typeof x !== "string") {
+        return "not a string";
+    }
+
     return "Hello, " + x + "!";
 }
