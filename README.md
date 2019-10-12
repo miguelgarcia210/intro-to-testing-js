@@ -180,7 +180,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 
 ### Exercise #6 Implement the refactor!
 - Inside `sayHello` in `code.js`, what's a change you can identify that will improve the overall functioning of this function?
-- Can you get the implmentation of `sayHello` down to a function with only one line of code inside?
+- Can you get the implementation of `sayHello` down to a function with only one line of code inside?
 - If we have `return "Hello, " + input + "!";`, does this work for all names?
 - Does this bring up any other issues with other inputs?
 
