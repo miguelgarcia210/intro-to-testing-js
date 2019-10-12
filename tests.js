@@ -85,3 +85,33 @@ describe('sayHello', function() {
         expect(sayHello(["a","b"])).toBe("not a string");
     });
 });
+
+describe('isFive', function() {
+    it('should return a defined function', function () {
+        expect(typeof isFive).toBe('function');
+    });
+//    Should return a boolean
+    it('should return a boolean value', function () {
+        expect(typeof isFive()).toBe("boolean");
+    });
+//    Should return true when passed 5
+    it('should return true when passed the number 5', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return false when passed another number', function () {
+        expect(isFive(55)).toBe(false);
+    });
+    it('should return false when passed another number', function () {
+        expect(isFive(500)).toBe(false);
+    });
+//    Should return true when passed the string "5"
+    it('should return true when passed the string "5"', function () {
+        expect(isFive("5")).toBe(true);
+    });
+    it('should return false when passed the string "55"', function () {
+        expect(isFive("55")).toBe(false);
+    });
+    it('should return false when passed the string "500"', function () {
+        expect(isFive("500")).toBe(false);
+    });
+});

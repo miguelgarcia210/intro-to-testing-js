@@ -50,3 +50,8 @@ function sayHello(x) {
 
     return "Hello, " + x + "!";
 }
+
+function isFive(x) {
+    return parseFloat(x) === 5;
+
+}
