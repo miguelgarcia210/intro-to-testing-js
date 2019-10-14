@@ -65,3 +65,7 @@ function isEven(x) {
 function isVowel(x) {
     return x === "a" || x === "e" || x === "i" || x === "o" || x === "u" || x === "A" || x === "E" || x === "I" || x === "O" || x === "U";
 }
+
+function add(a, b) {
+    return parseFloat(a) + parseFloat(b);
+}
